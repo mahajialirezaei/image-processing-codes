@@ -17,3 +17,10 @@ def subtraction(m1:np.ndarray, m2:np.ndarray):
         return m
     except TypeError:
         return "Cannot be done"
+
+def multiply(m1:np.ndarray, m2:np.ndarray):
+    try:
+        m = np.multiply(m1, m2)
+        return m
+    except TypeError:
+        return "Cannot be done"
