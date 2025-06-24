@@ -1,8 +1,4 @@
-from typing import Any
-
 import numpy as np
-from numpy import ndarray, dtype
-
 
 def addition(m1:np.ndarray, m2:np.ndarray):
     try:
