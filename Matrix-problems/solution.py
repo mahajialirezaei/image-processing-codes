@@ -24,3 +24,10 @@ def multiply(m1:np.ndarray, m2:np.ndarray):
         return m
     except TypeError:
         return "Cannot be done"
+
+def convolution(m1:np.ndarray, m2:np.ndarray):
+    try:
+        m = np.convolve(m1, m2)
+        return m
+    except TypeError:
+        return "Cannot be done"
