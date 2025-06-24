@@ -30,6 +30,7 @@ def multiply(m1:np.ndarray, m2:np.ndarray):
 def convolution(m1:np.ndarray, m2:np.ndarray):
     m_x = m1.shape[0] - m2.shape[0] + 1
     m_y = m1.shape[1] - m2.shape[1] + 1
+    result = np.zeros([m_x, m_y])
     if m_x <= 0 or m_y <= 0:
         return "Cannot be done"
     m = []
@@ -38,5 +39,6 @@ def convolution(m1:np.ndarray, m2:np.ndarray):
         for j in range(m_y):
             m[i].append([])
             m1_s = m1[i: i+ m2.shape[0], j:j + m2.shape[1]]
-            m[i][j] = np.sum(np.multiply(m1_s, m2))
-    return np.array(m)
+            result[i, j] = np.sum(np.multiply(m1_s, m2))
+    return result
+
