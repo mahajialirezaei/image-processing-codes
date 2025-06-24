@@ -11,3 +11,9 @@ def addition(m1:np.ndarray, m2:np.ndarray):
     except TypeError:
         return "Cannot be done"
 
+def subtraction(m1:np.ndarray, m2:np.ndarray):
+    try:
+        m = np.subtract(m1, m2)
+        return m
+    except TypeError:
+        return "Cannot be done"
