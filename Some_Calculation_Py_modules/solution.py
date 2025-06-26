@@ -16,5 +16,5 @@ def min_max_normalizer(A: np.array):
     A_min = np.min(A)
     A_max = np.max(A)
 
-    A_min_max = (A-A_max)/(A_max-A_min)
+    A_min_max = (A-A_min)/(A_max-A_min)
     return A_min_max
