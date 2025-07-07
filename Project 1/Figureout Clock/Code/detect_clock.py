@@ -3,6 +3,7 @@
 import cv2
 import numpy as np
 def detect_clock(binary_image):
+    from black_white_convertor import black_white_convertor
     gray = black_white_convertor(binary_image)
     gray_blur = cv2.GaussianBlur(gray, (9,9), 2)
 
