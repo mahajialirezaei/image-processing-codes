@@ -65,9 +65,4 @@ def detect_clock(binary_image):
     cv2.line(img3channel, (line_minute[0],line_minute[1]), (line_minute[2],line_minute[3]), (0,255,0), 3)
     cv2.line(img3channel, (line_hour[0],line_hour[1]),     (line_hour[2],line_hour[3]),     (255,0,0), 3)
 
-    plt.figure(figsize=(6,6))
-    plt.imshow(cv2.cvtColor(img3channel, cv2.COLOR_BGR2RGB))
-    plt.axis('off')
-    plt.title("Clock")
-    plt.show()
     return img3channel
