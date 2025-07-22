@@ -12,3 +12,11 @@ def detect_played(address):
     mask_red_2 = cv2.inRange(img, lower_bound_red2, upper_bound_red2)
 
     mask_red = cv2.bitwise_or(mask_red_1, mask_red_2)
+
+    lower_bound_yellow = [20, 100, 100]
+    upper_bound_yellow = [30, 255, 255]
+
+    mask_yellow = cv2.inRange(img, lower_bound_yellow, upper_bound_yellow)
+
+    mask = cv2.bitwise_or(mask_red, mask_yellow)
+
